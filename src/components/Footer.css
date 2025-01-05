@@ -1,0 +1,67 @@
+.footer {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  .shashank-s-text{
+    transform: transform();
+  }
+  
+ /* Sticky Back-to-Top Arrow */
+#eltdf-back-to-top {
+  position: fixed;
+  bottom: 20px; /* Position from the bottom */
+  right: 20px; /* Position from the right */
+  z-index: 9999; /* Ensure the arrow is on top of other content */
+  display: none; /* Initially hidden */
+  background: none; /* Remove the background */
+  border-radius: 50%;
+  padding: 10px; /* Small padding to make it clickable */
+}
+
+#eltdf-back-to-top:hover {
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Arrow Styles */
+.eltdf-back-to-top-arrow {
+  fill: white; /* Arrow color */
+  transition: transform 0.3s ease;
+}
+
+/* Add some styles for the circle animation effect */
+.eltdf-svg-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.eltdf-svg-circle circle {
+  fill: none;
+  stroke: white; /* Circle stroke color */
+  stroke-width: 2px;
+}
+
+/* Show the arrow when scrolling down */
+#eltdf-back-to-top.show {
+  display: block;
+}
+
+.spacer {
+  height: 80px; /* Adjust the vertical space as needed */
+  }
+
+  .shashank-footer-bottom-holder
+  {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    background-color: #f5f0eb;
+    border-top: 0 solid #e1e1e1;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+  }

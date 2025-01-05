@@ -1,0 +1,101 @@
+.content {
+    height: 60vh;
+    }
+    
+    .text-content {
+    position: absolute;
+    bottom: 0;
+    left: -10;
+    }
+
+
+    .purchase-link
+    {
+       position: fixed; /* Fix the position to the screen */
+       top: 26%; /* Vertically center the link */
+       right: 0; /* Position it at the leftmost part */
+       transform: translateY(-50%); /* Adjust for perfect vertical centering */
+       display: flex; /* Arrange the icon and text horizontally */
+       align-items: center; /* Vertically align the icon and text */
+       text-decoration: none; /* Remove underline from the link */
+       color: inherit; /* Inherit color */
+       padding: 5px 10px; /* Smaller padding */
+       transition: background-color 0.3s ease; /* Smooth transition on hover */
+       z-index: 9999; /* Ensure it's on top of other elements */
+       font-size: 12px; /* Smaller font size */
+       background-color: white; /* Darker color on hover */
+   }
+   
+    .purchase-link:hover {
+     
+   }
+   
+   /* Icon Styling */
+    .purchase-link
+   .rbt-icon {
+       display: inline-block; /* Make the icon inline-block */
+       margin-right: 5px; /* Space between icon and text */
+   }
+   
+   /* Optional Image Styling */
+    .purchase-link
+    img {
+       width: 24px; /* Smaller image size */
+       height: 24px; /* Maintain aspect ratio */
+       margin-right: 5px; /* Space between image and text */
+       object-fit: cover; /* Fill the space properly */
+   }
+   
+   /* Text Styling */
+    .purchase-link
+   .rbt-purchase-text {
+       font-size: 12px; /* Smaller text size */
+       font-weight: bold; /* Bold text */
+       color: white; /* Text color */
+       letter-spacing: 1px; /* Slight letter spacing */
+   }
+   
+   /* Hover Effects */
+    .purchase-link
+   :hover .rbt-purchase-text {
+       color: white; /* Ensure text stays white on hover */
+       text-decoration: none; /* Remove underline on hover */
+   }
+
+
+
+
+   /* Container for sticky cart link */
+
+ 
+  
+  
+   .sticky-button {
+    position: fixed;
+    top: 20%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1000; 
+
+    }
+    
+
+   .sticky-button img {
+    display: block;
+    width: 100%; /* Ensures the image fits the container */
+    height: auto; /* Maintains aspect ratio */
+    background-color: transparent; /* Transparent background if needed */
+}
+    .sticky-button button {
+    
+    cursor: pointer;
+
+    }
+    
+
+   
+
+
+.spacer {
+    height: 50px; /* Adjust the vertical space as needed */
+    }
