@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import './Footer.css';
 import './Header.css';
 import { useEffect } from 'react';
@@ -6,6 +6,8 @@ import { useEffect } from 'react';
 const handleClick = (e) => {
   e.preventDefault(); // Prevents the default action of the anchor tag
 };
+
+
 
 
 /*  animation method  */
@@ -23,8 +25,8 @@ const AnimatedText = () => {
       >
         <div className="shashank-stamp-image-holder">
           <img
-            width="80"
-            height="88"
+            width="144"
+            height="113"
             src="https://solene.qodeinteractive.com/wp-content/uploads/2019/12/footer-text-test.png"
             className="attachment-full size-full"
             alt="m"
@@ -62,6 +64,7 @@ const AnimatedText = () => {
 
 
 const Footer = () => {
+  const [text, setText] = useState("");
   useEffect(() => {
     const handleScroll = () => {
       const backToTopButton = document.getElementById('eltdf-back-to-top');
@@ -295,21 +298,9 @@ const Footer = () => {
               <ul></ul>
             </div>
 
-            <form
-              action="/parallax-showcase/#wpcf7-f15-o1"
-              method="post"
-              className="wpcf7-form init demo"
-              aria-label="Contact form"
-              novalidate="novalidate"
-              data-status="init"
-            >
+            
               <div style={{ display: 'none' }}>
-                <input type="hidden" name="_wpcf7" value="15" />
-                <input type="hidden" name="_wpcf7_version" value="5.9.8" />
-                <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f15-o1" />
-                <input type="hidden" name="_wpcf7_container_post" value="0" />
-                <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                
               </div>
               <div className="shashank-nl-custom-style">
                 <span className="wpcf7-form-control-wrap" data-name="your-email">
@@ -320,17 +311,19 @@ const Footer = () => {
                     aria-required="true"
                     aria-invalid="false"
                     placeholder="e-mail"
-                    value=""
+                    value={text}
+                    onChange={(e) => setText(e.target.value)}
                     type="email"
                     name="your-email"
                   />
                 </span>
-                <button className="wpcf7-form-control wpcf7-submit shashank-btn shashank-btn-large shashank-btn-solid" type="submit">
-                  <span className="shashank-btn-text">Send</span>
+                <button className="icon-button" type="submit">
+                <i class="fas fa-envelope"></i>
+                  
                 </button>
               </div>
               <div className="wpcf7-response-output" aria-hidden="true"></div>
-            </form>
+           
           </div>
         </div>
       </div>

@@ -65,3 +65,16 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box
   }
+
+  .icon-button {
+    background: none; /* Remove background */
+    border: none;     /* Remove border */
+    padding: 0;       /* Remove padding */
+    margin: 0;        /* Remove margin */
+    cursor: pointer;  /* Change cursor to pointer */
+}
+
+.icon-button i {
+  color: #84847c;      /* Set icon color */
+  
+}
