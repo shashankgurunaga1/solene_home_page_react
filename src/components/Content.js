@@ -14,7 +14,7 @@ import { useState } from 'react';
 const handleClick = (e) => {
     e.preventDefault(); // Prevents the default action of the anchor tag
   };
-  
+
   const Related = () =>{
     const [isToolbarVisible, setIsToolbarVisible] = useState(false);
     
@@ -38,10 +38,68 @@ const handleClick = (e) => {
 
         {isToolbarVisible && (
           <div className="expanded-toolbar">
-            <p> extended toolbar</p>
-            <button onClick={() => alert('Action 1 clicked!')}>Action 1</button>
-            <button onClick={() => alert('Action 2 clicked!')}>Action 2</button>
-            <button onClick={() => alert('Action 3 clicked!')}>Action 3</button>
+            
+
+
+
+
+
+
+
+
+            <div class="rbt-list-inner">
+
+<div class="rbt-logo">
+    <a href="#" onClick={handleClick} target="_blank">
+        <div class="logo-svg-holder">
+            <svg x="0px" y="0px" viewBox="0 0 87 87" style={{ fill: '#ee2852', height: '40px' }} >
+                <path d="M55.4,81.5c6.1-11.1,5.2-16.1-4.3-24.3c6.1-3.5,9.5-8.5,9.1-15.7c-0.5-8.2-7.7-14.7-16.3-14.6
+                    c-8.5,0.1-15.6,6.7-15.9,15c-0.3,8.5,5.9,15.8,14.3,16.6c1.4,0.1,2.8,0.2,4.2,0.5c5.9,1.2,10.2,6.7,9.8,12.6
+                    c-0.4,6.4-5.5,11.4-11.8,11.7C24.9,84.2,5.9,68.5,3.2,49.3C-0.1,26.9,14.4,6.8,36.4,2.8c22.3-4,43.4,10,48.1,32
+                    c4.3,20-8.6,41.2-28.4,46.7C55.9,81.5,55.6,81.5,55.4,81.5z"></path>
+            </svg>
+        </div>
+        <p class="logo-text-holder">Qode Interactive</p>
+    </a>
+</div>
+
+
+
+                        <span class="rbt-list-related">Related Themes</span>
+                                    <a target="_blank" href="#" onClick={handleClick} title="Sonora - Photography WordPress Theme">
+                <div class="rbt-theme">
+                    <div class="rbt-img-hover">
+                        <img itemprop="image" width="225" height="114" src="https://previews.customer.envatousercontent.com/files/481152732/00_preview.__large_preview.jpg" alt="Sonora" class=""/>
+                    </div>
+                    <span class="rbt-theme-name">Sonora</span>
+                    <span class="rbt-theme-tag">photography</span>
+                    <span class="rbt-theme-price">$85</span>
+                </div>
+            </a>
+                                            <a target="_blank" href="#" onClick={handleClick} title="Cassia - Photography Portfolio Theme">
+                <div class="rbt-theme">
+                    <div class="rbt-img-hover">
+                        <img itemprop="image" width="225" height="114" src="https://previews.customer.envatousercontent.com/files/438700442/00_preview.__large_preview.png" alt="Cassia" class=""/>
+                    </div>
+                    <span class="rbt-theme-name">Cassia</span>
+                    <span class="rbt-theme-tag">photography</span>
+                    <span class="rbt-theme-price">$79</span>
+                </div>
+            </a>
+                                            <a target="_blank" href="#" onClick={handleClick} title="Amoli - Fashion Photography Theme">
+                <div class="rbt-theme">
+                    <div class="rbt-img-hover">
+                        <img itemprop="image" width="225" height="114" src="https://previews.customer.envatousercontent.com/files/352423420/00_preview.__large_preview.png" alt="Amoli" class=""/>
+                    </div>
+                    <span class="rbt-theme-name">Amoli</span>
+                    <span class="rbt-theme-tag">photography</span>
+                    <span class="rbt-theme-price">$79</span>
+                </div>
+            </a>
+            </div>
+
+
+
           </div>
         )}
         </div>
