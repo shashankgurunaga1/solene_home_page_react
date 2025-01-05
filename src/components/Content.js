@@ -9,12 +9,41 @@ import Image4 from '../images/img4.jpg';
 import Image5 from '../images/img5.jpg';
 import Image6 from '../images/img6.jpg';
 import BuyNow from '../images/related1.jpeg';
+import { useState } from 'react';
 
-const Related = () =>{
+const handleClick = (e) => {
+    e.preventDefault(); // Prevents the default action of the anchor tag
+  };
+  
+  const Related = () =>{
+    const [isToolbarVisible, setIsToolbarVisible] = useState(false);
+    
+    // Toggle toolbar visibility
+    const toggleToolbar = () => {
+      setIsToolbarVisible(!isToolbarVisible);
+      console.log('toolbar visible', !isToolbarVisible);
+      
+    };
+
     return (
-        <div class="sticky-button">
-        <button><img src={BuyNow} /></button>
-        
+        <div className="sticky-button">
+            
+        <button>
+            <img src={BuyNow}
+             alt="Expand Toolbar"
+        className="toolbar-trigger-image"
+         onClick={toggleToolbar} />
+         </button>
+
+
+        {isToolbarVisible && (
+          <div className="expanded-toolbar">
+            <p> extended toolbar</p>
+            <button onClick={() => alert('Action 1 clicked!')}>Action 1</button>
+            <button onClick={() => alert('Action 2 clicked!')}>Action 2</button>
+            <button onClick={() => alert('Action 3 clicked!')}>Action 3</button>
+          </div>
+        )}
         </div>
 
 
@@ -27,7 +56,7 @@ const PurchaseLink = () => {
     return (
 
 
-<a className="purchase-link" target="_blank" href="https://qodeinteractive.com/purchase/solene/?aso=direct&amp;aca=direct&amp;aid=elated-themes&amp;_gl=1*idl2iv*_gcl_au*NjM2ODc1OTExLjE3MzYwNjkxMjI.">
+<a className="purchase-link" target="_blank" href="#" onClick={handleClick}>
     <span className="rbt-icon">
         <svg x="0px" y="0px" viewBox="0 0 24 24" style={{ fill: '#ee2852', height: '16px' }}>
             <circle cx="9" cy="21" r="2"></circle>

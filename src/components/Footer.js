@@ -3,6 +3,11 @@ import './Footer.css';
 import './Header.css';
 import { useEffect } from 'react';
 
+const handleClick = (e) => {
+  e.preventDefault(); // Prevents the default action of the anchor tag
+};
+
+
 /*  animation method  */
 
 const AnimatedText = () => {
@@ -119,7 +124,8 @@ const Footer = () => {
       fontSize: '18px',
       margin: '0 10px',
     }}
-    href="https://www.instagram.com/qodeinteractive/"
+    href="#"
+    onClick={handleClick}
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -135,7 +141,8 @@ const Footer = () => {
       fontSize: '18px',
       margin: '0 10px', // Added margin for spacing between icons
     }}
-    href="https://www.facebook.com/QodeInteractive/"
+    href="#"
+    onClick={handleClick}
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -150,7 +157,8 @@ const Footer = () => {
       fontSize: '18px',
       margin: '0 10px',
     }}
-    href="https://twitter.com/QodeInteractive"
+    href="#"
+    onClick={handleClick}
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -167,7 +175,8 @@ const Footer = () => {
       fontSize: '18px',
       margin: '0 10px',
     }}
-    href="https://www.youtube.com/QodeInteractiveVideos"
+    href="#"
+    onClick={handleClick}
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -189,7 +198,7 @@ const Footer = () => {
                   fontStyle: 'italic',
                 }}
               >
-                <a href="/cdn-cgi/l/email-protection#3b484e4b4b54494f7b4a545f5e52554f5e495a584f524d5e1558545600">
+                <a href="#" onClick={handleClick}>
                   <span
                     className="cf_email"
                     data-cfemail="d380bcbfb6bdb693a2bcb7b6babda7b6a1b2b0a7baa5b6fdb0bcbe"
