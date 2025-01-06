@@ -9,53 +9,35 @@ import Image4 from '../images/img4.jpg';
 import Image5 from '../images/img5.jpg';
 import Image6 from '../images/img6.jpg';
 import BuyNow from '../images/related1.jpeg';
-import { useState,useRef,useEffect } from 'react';
+import { useState } from 'react';
 
 const handleClick = (e) => {
     e.preventDefault(); // Prevents the default action of the anchor tag
   };
 
   const Related = () =>{
-    const [isTaskbarOpen, setIsTaskbarOpen] = useState(false);
-  const taskbarRef = useRef(null);
-  const buttonRef = useRef(null);
-
-  const toggleTaskbar = () => {
-    setIsTaskbarOpen((prev) => !prev);
-  };
-
-  const handleClickOutside = (event) => {
-    if (
-      taskbarRef.current &&
-      !taskbarRef.current.contains(event.target) &&
-      buttonRef.current &&
-      !buttonRef.current.contains(event.target)
-    ) {
-      setIsTaskbarOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+    const [isToolbarVisible, setIsToolbarVisible] = useState(false);
+    
+    // Toggle toolbar visibility
+    const toggleToolbar = () => {
+      setIsToolbarVisible(!isToolbarVisible);
+      console.log('toolbar visible', !isToolbarVisible);
+      
     };
-  }, []);
-
 
     return (
         <div className="sticky-button">
             
-        
-            <button  ref={buttonRef} onClick={toggleTaskbar} >
-                <img src={BuyNow}
-                alt="Expand Toolbar"
-                className="toolbar-trigger-image"
-                />
-            </button>
+        <button>
+            <img src={BuyNow}
+             alt="Expand Toolbar"
+        className="toolbar-trigger-image"
+         onClick={toggleToolbar} />
+         </button>
 
-        {isTaskbarOpen && (
-          <div ref={taskbarRef}  className="expanded-toolbar" >
+
+        {isToolbarVisible && (
+          <div className="expanded-toolbar">
             
 
 
