@@ -348,7 +348,7 @@ const Footer = () => {
             			<div class="textgadget">
                     <p>
                       <span style={{"font-size": '18px;', "font-family": "Cormorant Garamond;", "color": "#4d504a;", "font-style": "italic;", "font-weight": "400;"}}>
-                        © 2020 <a href="https://qodeinteractive.com/" rel="nofollow noopener" target="_blank"> Qode Interactive</a>, All Rights Reserved
+                        © 2020 <a href="#" onClick={handleClick} rel="nofollow noopener" target="_blank"> Qode Interactive</a>, All Rights Reserved
                       </span>
                       </p>
                   </div>
@@ -365,7 +365,7 @@ const Footer = () => {
 
 
 
-<a id="eltdf-back-to-top" href="#">
+<a id="eltdf-back-to-top" href="#" >
     <span>
         <svg className="eltdf-svg-circle">
             <circle cx="50%" cy="50%" r="45%"></circle>
